@@ -22,7 +22,7 @@ jobs:
         run: yarn install --frozen-lockfile --immutable
 
       - name: Generate content
-        run: node build
+        run: yarn node build
 
       - name: Publish to GitHub Pages
         uses: rayluo/github-pages-overwriter@v1.2
