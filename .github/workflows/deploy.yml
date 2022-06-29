@@ -10,12 +10,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      
+      - name: Set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+          cache: "yarn"
+      
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --immutable
 
-      - name: Generate your content
+      - name: Generate content
         run: node build
 
-      - name: Publish current workdir to GitHub Pages
+      - name: Publish to GitHub Pages
         uses: rayluo/github-pages-overwriter@v1.2
 
         with:
