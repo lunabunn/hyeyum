@@ -1,0 +1,65 @@
+body {
+    writing-mode: vertical-rl;
+    font-family: "Source Han Serif", serif;
+    color: #1d0600;
+    padding: 25px;
+    font-size: 24pt;
+}
+
+*:first-child {
+    margin-right: 0;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: -0.5em;
+}
+
+h1::before {
+    content: "△";
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 2em 0;
+}
+
+ol {
+    list-style-type: cjk-ideographic;
+}
+
+p,
+li {
+    font-size: 1em;
+    line-height: 200%;
+    margin: 0 0.5em;
+}
+
+li>p:first-of-type {
+    display: inline;
+}
+
+ruby {
+    text-justify: distribute;
+}
+
+rt {
+    color: black;
+    font-weight: normal !important;
+    font-size: 0.5em;
+}
+
+h1 rt {
+    font-weight: bold !important;
+}
+
+.red {
+    color: #b41907;
+}
+
+.hanja {
+    font-weight: 600;
+}
